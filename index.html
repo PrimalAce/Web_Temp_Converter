@@ -19,7 +19,7 @@
             <option value="fahrenheit">Fahrenheit</option>
         </select>
 
-        <hr>
+        <hr style="border: 2px solid #333; margin: 20px 0;">
 
         <label for="result">Result:</label>
         <input type="number" id="result" readonly>
@@ -28,6 +28,14 @@
             <option value="celsius">Celsius</option>
             <option value="fahrenheit">Fahrenheit</option>
         </select>
+
+        <button id="historyToggle" class="history-toggle"> History</button>
+
+        <div id="historySection" class="history-section" style="display: none;">
+            <div id="historyList" class="history-list">
+                <p style="text-align: center; color: #999;">No conversions yet</p>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>

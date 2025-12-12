@@ -31,7 +31,7 @@ input[type="number"], select {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%; /* Make inputs fill the container width */
+    width: 94%; /* Make inputs fill the container width */
 }
 
 button {
@@ -46,13 +46,41 @@ button {
 
 button:hover {
     background-color: #3e8e41;
+} 
+
+.history-toggle {
+    background-color: #2196F3;
+    margin-top: 15px;
+    width: 100%;
 }
 
-hr {
-    border: none;
-    height: 3px;
-    background: linear-gradient(to right, #4CAF50, #45a049, #4CAF50);
-    border-radius: 2px;
-    margin: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.history-toggle:hover {
+    background-color: #0b7dda;
+}
+
+.history-section {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.history-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.history-item {
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border-left: 4px solid #2196F3;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.history-time {
+    color: #999;
+    font-size: 12px;
 }
