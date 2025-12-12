@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() { // Wait for the DOM t
 
     const temperatureInput = document.getElementById('temperature');
     const unitSelect = document.getElementById('unit');
-    const convertBtn = document.getElementById('convertBtn');
     const resultInput = document.getElementById('result');
     const resultUnitSelect = document.getElementById('resultUnit');
 
@@ -11,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() { // Wait for the DOM t
         const temperature = parseFloat(temperatureInput.value); // Convert input to a number
 
         if (isNaN(temperature)) {
-            alert("Please enter a valid number.");
+            resultInput.value = '';
             return;
         }
 
@@ -33,12 +32,8 @@ document.addEventListener('DOMContentLoaded', function() { // Wait for the DOM t
     }
 
 
-    convertBtn.addEventListener('click', convertTemperature);
-
-    // Optional: Convert on Enter key press in the input field
-    temperatureInput.addEventListener("keyup", function(event) {
-        if (event.key === "Enter") {
-            convertTemperature();
-        }
-    });
+    // Real-time conversion on input
+    temperatureInput.addEventListener('input', convertTemperature);
+    unitSelect.addEventListener('change', convertTemperature);
+    resultUnitSelect.addEventListener('change', convertTemperature);
 });
