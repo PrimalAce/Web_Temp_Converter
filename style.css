@@ -47,3 +47,12 @@ button {
 button:hover {
     background-color: #3e8e41;
 }
+
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, #4CAF50, #45a049, #4CAF50);
+    border-radius: 2px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
